@@ -26,4 +26,3 @@ Ejemplos
 ● entrada : "()(()" salida : "()()"
 ● entrada : ")(" salida : ""
 ● entrada : "((()" salida : "()"
-
