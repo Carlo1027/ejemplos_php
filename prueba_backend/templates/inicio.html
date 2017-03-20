@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio</title>
+</head>
+<body>
+	<h2>Buscar</h2>
+	<form action="/searchs/employee" method="GET">
+		<label>Email</label>
+		<input type="text" name="email" required>
+		<button>Buscar</button>
+	</form><br>
+
+	<h2>Servicio Web XML</h2>
+	<form action="/searchs/salary" method="GET">
+		<div>
+			<span>Minimo </span>
+			<input type="number" name="min" value="1000" required>
+		</div>
+		<div>
+			<span>Maximo </span>
+			<input type="number" name="max" value="1500" required>
+		</div>
+		<button>Filtrar</button>
+	</form>
+	<h2>Todos los empleados</h2>
+	<table>
+		<thead>
+			<th>name</th>
+			<th>email</th>
+			<th>position</th>
+			<th>salary</th>
+			<th>detail</th>
+		</thead>
+		<tbody>
+			{% for employee in employees %}
+			<tr>
+		        <td>{{ employee.name }}</td>
+		        <td>{{ employee.email }}</td>
+		        <td>{{ employee.position }}</td>
+		        <td>{{ employee.salary }}</td>
+		        <td><a href="/employees/{{ employee.id }}">detail</a></td>
+			</tr>
+		    {% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

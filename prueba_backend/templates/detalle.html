@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Detalle</title>
+</head>
+<body>
+	<h2>Detalle de empleado: {{ id }}</h2>
+	<table>
+		<thead>
+			<th>name</th>
+			<th>email</th>
+			<th>phone</th>
+			<th>address</th>
+			<th>position</th>
+			<th>salary</th>
+			<th>skills</th>
+		</thead>
+		<tbody>
+			<tr>
+		        <td>{{ employee.name }}</td>
+		        <td>{{ employee.email }}</td>
+		        <td>{{ employee.phone }}</td>
+		        <td>{{ employee.address }}</td>
+		        <td>{{ employee.position }}</td>
+		        <td>{{ employee.salary }}</td>
+		      	<td>
+		        	<ul>
+			        	{% for skill in employee.skills %}
+							<li>{{ skill.skill }}</li>
+			        	{% endfor %}
+		        	</ul>
+		        </td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="/employees">Atrás</a>
+</body>
+</html>

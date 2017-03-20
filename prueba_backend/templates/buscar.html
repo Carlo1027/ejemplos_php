@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Busqueda</title>
+</head>
+<body>
+	<h2>Buscar</h2>
+	<form action="/searchs/employee" method="GET">
+		<label>Email</label>
+		<input type="text" name="email" required>
+		<button>Buscar</button>
+	</form>
+	<h2>Todos los empleados</h2>
+	<table>
+		<thead>
+			<th>name</th>
+			<th>email</th>
+			<th>position</th>
+			<th>salary</th>
+			<th>detail</th>
+		</thead>
+		<tbody>
+			<tr>
+		        <td>{{ employee.name }}</td>
+		        <td>{{ employee.email }}</td>
+		        <td>{{ employee.position }}</td>
+		        <td>{{ employee.salary }}</td>
+		        <td><a href="/employees/{{ employee.id }}">detalle</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="/employees">Borrar resultados</a>
+</body>
+</html>
