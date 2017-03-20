@@ -26,3 +26,7 @@ Ejemplos
 ● entrada : "()(()" salida : "()()"
 ● entrada : ")(" salida : ""
 ● entrada : "((()" salida : "()"
+
+Parte 2
+
+Aplicación usando el framework Slim, desarrollo integramente en PHP.
